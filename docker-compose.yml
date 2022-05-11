@@ -129,6 +129,15 @@ services:
       POSTGRES_HOSTNAME: postgres
       POSTGRES_PASSWORD: 'ChooseYourOwnPasswordHere1234'
       POSTGRES_USER: guacamole_user
+      OPENID_AUTHORIZATION_ENDPOINT: https://keycloak.rfa.net:8443/auth/realms/master/protocol/openid-connect/auth
+      OPENID_JWKS_ENDPOINT: https://keycloak.rfa.net:8443/auth/realms/master/protocol/openid-connect/certs
+      OPENID_ISSUER: https://keycloak.rfa.net:8443/auth/realms/master
+      OPENID_CLIENT_ID: guacamole
+      OPENID_REDIRECT_URI: https://guacamole.rfa.net:8443/guacamole/#/settings/sessions
+      OPENID_REDIRECT_URI: https://guacamole.rfa.net:8443/guacamole
+      OPENID_CLAIM_TYPE: sub
+      # OPENID_CLAIM_TYPE: preferred_username
+      OPENID_SCOPE: openid profile
     image: guacamole/guacamole
     links:
     - guacd
