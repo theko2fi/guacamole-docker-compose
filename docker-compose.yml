@@ -129,6 +129,7 @@ services:
       POSTGRES_HOSTNAME: postgres
       POSTGRES_PASSWORD: 'ChooseYourOwnPasswordHere1234'
       POSTGRES_USER: guacamole_user
+      POSTGRESQL_AUTO_CREATE_ACCOUNTS: true
       OPENID_AUTHORIZATION_ENDPOINT: https://keycloak.rfa.net:8443/auth/realms/master/protocol/openid-connect/auth
       OPENID_JWKS_ENDPOINT: https://keycloak.rfa.net:8443/auth/realms/master/protocol/openid-connect/certs
       OPENID_ISSUER: https://keycloak.rfa.net:8443/auth/realms/master
